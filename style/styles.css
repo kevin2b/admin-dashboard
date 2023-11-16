@@ -16,7 +16,7 @@ html{
 
 .container{
   display:grid;
-  grid-template: 3fr 9fr / 2fr 8fr;
+  grid-template: 3fr 9fr / 2fr minmax(500px, 8fr);
 }
 
 .sidebar{
@@ -63,6 +63,47 @@ html{
   align-items: center;
 }
 
-.content{
+.content,
+#search-bar{
   background-color: #8080804a;	
+}
+
+.header{
+  padding: 10px 20px;
+}
+
+.header-first-row{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-image{
+  width: auto;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+#search-bar{
+  border-radius: 10px;
+  height: 1.5rem;
+  border: none;
+  margin-right: auto;
+  width: max(100px,50%);
+}
+
+.header-profile-image{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-image: url("../images/profile-picture.png");
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.header-name{
+  font-weight: 700;	
+  margin-right: 20px;
+  flex-shrink: 0;
+  word-break: break-all;
 }
