@@ -16,13 +16,17 @@ html{
 
 .container{
   display:grid;
-  grid-template: 3fr 9fr / 2fr minmax(500px, 8fr);
+  grid-template: auto 9fr / 2fr minmax(500px, 8fr);
 }
 
 .sidebar{
   grid-row: 1 / 3;
-  background-color: #008dd2e3;
   padding: 10px;
+}
+
+.sidebar,
+.header-button{
+  background-color: #008dd2e3;
 }
 
 .sidebar-header-image{
@@ -76,6 +80,7 @@ html{
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .header-image{
@@ -92,7 +97,7 @@ html{
   width: max(100px,50%);
 }
 
-.header-profile-image{
+.profile-image{
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -106,4 +111,36 @@ html{
   margin-right: 20px;
   flex-shrink: 0;
   word-break: break-all;
+  font-size: 0.8rem;
+}
+
+.header-second-row{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-second-row > .profile-image{
+  width: 3rem;
+  height: 3rem;
+}
+
+.welcome-container{
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.welcome-container > :first-child{
+  font-size: 0.5rem;
+}
+
+.header-button{
+  font-weight: 700;	
+  font-size: 0.8rem;
+  color: white;
+  padding: 5px 10px;
+  border: 0;
+  margin: 0;
+  width: 5rem;
+  border-radius: 1rem;
 }
